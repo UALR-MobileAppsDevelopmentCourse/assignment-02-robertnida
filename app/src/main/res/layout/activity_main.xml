@@ -33,7 +33,7 @@
             android:id="@+id/userInputET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
+            android:autofillHints="kys"
             android:ems="10"
             android:gravity="center_vertical"
             android:hint="@string/write_msg_hint"
@@ -41,16 +41,32 @@
 
         <Button
             android:id="@+id/showBtn"
-            android:layout_width="match_parent"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="#E91E63"
             android:fontFamily="sans-serif-black"
             android:onClick="showTextMessage"
             android:text="show text"
+            android:textAlignment="textStart"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cleanBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#E91E63"
+            android:fontFamily="sans-serif-black"
+            android:onClick="cleanTextField"
+            android:text="clear text"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <!-- TODO 04. Set a new width value (120dp) for the button with the id "showBtn" -->
         <!-- TODO 05. Add a new property to the "showBtn" to align the text within to the left side of the button -->
         <!-- TODO 08. Add a new button with the id "cleanBtn" to the layout with the same properties of the show button (showBtn) -->

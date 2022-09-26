@@ -1,11 +1,14 @@
-package com.ualr.helloworld;
+package com.ualr.firstapp;
+
+import static java.sql.Types.NULL;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ualr.helloworld.databinding.ActivityMainBinding;
+import com.ualr.firstapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO 06. Avoid updating the text label (userMsgTV) when the text field (userInputET) is empty
     public void showTextMessage(View view) {
-        mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());
+        if(TextUtils.isEmpty(mBinding.userInputET.getText().toString())){
+            return;
+        }
+       else {mBinding.userMsgTV.setText(mBinding.userInputET.getText().toString());}
     }
 
+    public void cleanTextField(View view){
+        mBinding.userInputET.setText("");
+        mBinding.userMsgTV.setText(R.string.default_msg);
+    }
     // TODO 07. Create a new method called cleanTextField to delete the text inside the text field
 }
+
